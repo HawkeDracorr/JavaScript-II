@@ -61,11 +61,15 @@ multiplyNums(21, 2, function(lemon) {
   console.log(lemon);
 });
 
-function contains(item, list, cb) {
+function contains(item, arr, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  
+  return cb(arr.includes(item))
 }
+
+contains('Gum', items, function(kiwi) {
+  console.log(kiwi);
+});
 
 /* STRETCH PROBLEM */
 

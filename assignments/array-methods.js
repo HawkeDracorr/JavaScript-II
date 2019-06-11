@@ -95,8 +95,34 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1: The event planner is curious who donated more than $150, as only these people are invited to chuck E Cheese afterwards.
+let lgDonor = [];
 
-// Problem 2
+runners.filter(function(runnerObject) {
+  if(runnerObject.donation > 150) {
+    lgDonor.push(`Is not a cheapskates: ${runnerObject.first_name} ${runnerObject.last_name}`)
+  }
+});
 
-// Problem 3
+console.log(lgDonor);
+
+// Problem 2: The planner is also curious as to which companies are sponsoring the runners.
+let sponsors = [];
+
+runners.forEach(function(runnerObject) {
+  sponsors.push(`${runnerObject.company_name}`)
+});
+
+console.log(sponsors);
+
+
+// Problem 3: The event planner is losing their mind becuase they forgot to plan for people with long names. Anyone whose first name is longer than 5 characters needs to have their initials on their bib instead. 
+let longName = [];
+
+runners.filter(function(runnerObject) {
+  if(runnerObject.first_name.length > 5) {
+    longName.push(`${runnerObject.first_name} ${runnerObject.last_name}`)
+  }
+});
+
+console.log(longName);
