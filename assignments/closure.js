@@ -1,6 +1,15 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+// Can't access variables inside it's child.
+let 'Mecha' = function(param1){
+  let battletag = `${param1}#1337`
+
+  // can access variables outside interval
+  let 'D.va' = function(param2){
+    let pwned = `${battletag} is pwned by ${param2}`
+  }
+}
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
